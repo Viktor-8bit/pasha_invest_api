@@ -5,6 +5,7 @@ from services import *
 
 from flask import Blueprint
 
+from flask import request
 
 
 def stock_api_fabrick(stockService: StockService):
@@ -12,6 +13,8 @@ def stock_api_fabrick(stockService: StockService):
 
     @stock_api.route("/get_stock_slice/")
     def get_stock_slice():
-        return stockService.get_stocks("2020-03-13", "2020-03-27")
+        before = request.args.get('before')
+        after = request.args.get('after')
+        return stockService.get_stocks(before, after)
 
     return stock_api

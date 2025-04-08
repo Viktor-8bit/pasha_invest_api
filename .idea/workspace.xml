@@ -4,24 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98068029-4d59-42a5-b2d2-59e188636792" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/PashaIvest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/endpoints/StockController.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/endpoints/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/Db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/Stock.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repositories/StockRepository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repositories/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/StockService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/__init__.py" afterDir="false" />
+    <list default="true" id="98068029-4d59-42a5-b2d2-59e188636792" name="Changes" comment="init repo">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/endpoints/StockController.py" beforeDir="false" afterPath="$PROJECT_DIR$/endpoints/StockController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/StockRepository.py" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/StockRepository.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Viktor-8bit"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Viktor-8bit/pasha_invest_api.git",
+    "accountId": "52ab79a0-4572-4a6e-b256-4db995d81b95"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -98,9 +97,22 @@
       <option name="presentableId" value="Default" />
       <updated>1744018292588</updated>
     </task>
+    <task id="LOCAL-00001" summary="init repo">
+      <option name="closed" value="true" />
+      <created>1744119105044</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744119105044</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="init repo" />
   </component>
 </project>

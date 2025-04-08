@@ -10,7 +10,7 @@ class StockRepository:
         self.db = db
 
     def get_by_time_range(self, before: str, after: str):
-        self.db.cur.execute(""" SELECT * FROM StocksFormated WHERE %s < date and date < %s ;""", (before, after))
+        self.db.cur.execute(""" SELECT * FROM StocksFormated WHERE %s <= date and date <= %s ;""", (before, after))
 
         data = self.db.cur.fetchall()
 
