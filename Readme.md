@@ -16,3 +16,7 @@ Api для обучения инвест бота
 Сделать срез 
 
 GET: http://127.0.0.1:5000/get_stock_slice?before="2020-03-16"&after="2020-03-18"
+
+Сделать выборку 
+
+GET:  http://127.0.0.1:5000/make_slice_by_figi?figi="BBG000RMWQD4"
