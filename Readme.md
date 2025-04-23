@@ -17,7 +17,7 @@ Api для обучения инвест бота
 ### Получение по start_date end_date PriceSlices информации об акции из представления StocksFormated ✅
 Админчик системы хочет получить данные о разметке, чтобы задать уровни акции для обучения нейронки.
 
-### Удаление/Создание PriceLevels записи для PriceSlices
+### Удаление/Создание PriceLevels записи для PriceSlices ✅
 Админчик системы хочет иметь возможность размечать уровни для PriceSlices акции для обучения нейронки, а также удаления неверно 
 размеченных уровней.
 
@@ -50,6 +50,8 @@ Api для обучения инвест бота
     "level_type": "some comment"
 }
 ```
+1. Удалить PriceLevel
+2. DELETE: http://127.0.0.1:5000/delete_price_level/3
 
 ## Какой сервис за что отвечает
 Сервисы [StockService, PriceSliceService, PriceLevelsService]

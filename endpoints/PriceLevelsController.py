@@ -15,8 +15,9 @@ def price_levels_fabrick(priceLevelService: PriceLevelService):
     price_levels_api = Blueprint('price_levels_api', __name__, template_folder='endpoints')
 
     # удаление разметки по id
-
-
+    @price_levels_api.route('/delete_price_level/<price_level_id>', methods=['DELETE'])
+    def delete_price_level(price_level_id):
+        return priceLevelService.delete_price_leve(price_level_id)
 
     # создание разметки по PriceSlices id
     @price_levels_api.route('/add_price_level/', methods=['POST'])
