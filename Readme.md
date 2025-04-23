@@ -25,11 +25,10 @@ Api для обучения инвест бота
 Админчик системы хочет автоматически разбить историческую информацию по акции из StocksFormated 
 на промежутки. 
 
-### Получение информации о том, как размечена акция (список PilceLevels) по id PriceSlices
+### Получение информации о том, как размечена акция (список PilceLevels) по id PriceSlices ✅
 Админчик системы хочет видеть результаты своей разметки
 
 ## Об api
-
 
 ### Use Case: Получение по start_date end_date PriceSlices информации об акции из представления StocksFormated
 1. Получить данные за период
@@ -52,6 +51,10 @@ Api для обучения инвест бота
 ```
 1. Удалить PriceLevel
 2. DELETE: http://127.0.0.1:5000/delete_price_level/3
+
+### Получение информации о том, как размечена акция (список PilceLevels) по id PriceSlices
+1. Получить PriceLevels по price_level_id
+2. GET: http://127.0.0.1:5000/get_price_level_by_slice_id/432
 
 ## Какой сервис за что отвечает
 Сервисы [StockService, PriceSliceService, PriceLevelsService]

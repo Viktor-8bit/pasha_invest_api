@@ -31,5 +31,8 @@ def price_levels_fabrick(priceLevelService: PriceLevelService):
             return 'Content-Type not supported!'
 
     # получить по slice_id разметки
+    @price_levels_api.route('/get_price_level_by_slice_id/<price_level_id>', methods=['GET'])
+    def get_price_level_by_slice_id(price_level_id):
+        return priceLevelService.get_price_level_by_slice_id(price_level_id)
 
     return price_levels_api

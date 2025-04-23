@@ -14,3 +14,6 @@ class PriceLevelService:
 
     def delete_price_leve(self, id: int):
         return self.level_repo.delete_price_level(id)
+
+    def get_price_level_by_slice_id(self, slice_id: int):
+        return self.level_repo.get_price_level_by_slice_id(slice_id)
