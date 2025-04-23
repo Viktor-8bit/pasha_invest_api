@@ -25,18 +25,31 @@ Api для обучения инвест бота
 Админчик системы хочет автоматически разбить историческую информацию по акции из StocksFormated 
 на промежутки. 
 
+### Получение информации о том, как размечена акция (список PilceLevels) по id PriceSlices
+Админчик системы хочет видеть результаты своей разметки
+
 ## Об api
 
 
 ### Use Case: Получение по start_date end_date PriceSlices информации об акции из представления StocksFormated
-Получить данные за период
-GET: http://127.0.0.1:5000/get_stock_slice?before="2020-03-16"&after="2020-03-18"
+1. Получить данные за период
+2. GET: http://127.0.0.1:5000/get_stock_slice?before="2020-03-16"&after="2020-03-18"
 
 ### Use Case: Разбиение исторических данных на PriceSlices по figi коду акции
-Сделать выборку для разметки 
-GET:  http://127.0.0.1:5000/make_slice_by_figi?figi="BBG000RMWQD4"
+1. Сделать выборку для разметки 
+2. GET:  http://127.0.0.1:5000/make_slice_by_figi?figi="BBG000RMWQD4"
 
-
+### Удаление/Создание PriceLevels записи для PriceSlices
+1. Добавить PriceLevel
+2. POST: http://127.0.0.1:5000/add_price_level/
+3. BODY
+```json 
+{
+    "slice_id": 432,
+    "level": 500,
+    "level_type": "some comment"
+}
+```
 
 ## Какой сервис за что отвечает
 Сервисы [StockService, PriceSliceService, PriceLevelsService]

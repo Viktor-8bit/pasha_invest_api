@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98068029-4d59-42a5-b2d2-59e188636792" name="Changes" comment="sliced by figi done">
-      <change afterPath="$PROJECT_DIR$/endpoints/PriceLevelsController.py" afterDir="false" />
+    <list default="true" id="98068029-4d59-42a5-b2d2-59e188636792" name="Changes" comment="change docs">
+      <change afterPath="$PROJECT_DIR$/model/PriceLevel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repositories/PriceLevelRepository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/PriceLevelService.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/endpoints/PriceSlicesController.py" beforeDir="false" afterPath="$PROJECT_DIR$/endpoints/PriceSlicesController.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/endpoints/StockController.py" beforeDir="false" afterPath="$PROJECT_DIR$/endpoints/StockController.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/endpoints/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/endpoints/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/endpoints/PriceLevelsController.py" beforeDir="false" afterPath="$PROJECT_DIR$/endpoints/PriceLevelsController.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/PriceSlicesRepository.py" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/PriceSlicesRepository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744716519825</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="change docs">
+      <option name="closed" value="true" />
+      <created>1745392746909</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1745392746909</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -145,6 +156,7 @@
     <MESSAGE value="added PriceSlice" />
     <MESSAGE value="created endpoint price slice" />
     <MESSAGE value="sliced by figi done" />
-    <option name="LAST_COMMIT_MESSAGE" value="sliced by figi done" />
+    <MESSAGE value="change docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="change docs" />
   </component>
 </project>
