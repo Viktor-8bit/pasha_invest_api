@@ -36,6 +36,18 @@ class PriceSlicesRepository:
             return  { 'result': 'false' }
         return { 'result': 'true' }
 
+    def get_unlabeled_data(self):
+        try:
+            unlabeled = []
+            self.db.cur.execute("""SELECT id FROM price_slices WHERE id NOT IN (SELECT slice_id FROM price_levels GROUP BY slice_id);""")
+            data = self.db.cur.fetchall()
+            for unlbl in data:
+                unlabeled.append(unlbl[0])
+            return unlabeled
+        except Exception:
+            return "ошибка"
+
+
 # CREATE TABLE if not exists price_slices (
 #     id SERIAL PRIMARY KEY,
 #     figi VARCHAR(64) NOT NULL,

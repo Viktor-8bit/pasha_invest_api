@@ -42,3 +42,16 @@ class PriceLevelRepository:
             return result
         except Exception:
             return {'result': 'ошибка'}
+
+    # получить не размеченные PriceLevels
+    def get_labeled_data(self):
+        try:
+            labled = []
+            self.db.cur.execute("""SELECT slice_id FROM price_levels GROUP BY slice_id;""")
+            data = self.db.cur.fetchall()
+            for lbl in data:
+                labled.append(lbl[0])
+            return labled
+
+        except Exception:
+            return 'ошибка'

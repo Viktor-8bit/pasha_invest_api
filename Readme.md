@@ -11,7 +11,7 @@ Api для обучения инвест бота
 
 ## Use Case 
 
-### Получение информации об уже размеченных/не размеченных PriceSlices акции 
+### Получение информации об уже размеченных/не размеченных PriceSlices акции ✅
 Админчик системы хочет получать данные об уже размеченных/не размеченных данных.
 
 ### Получение по start_date end_date PriceSlices информации об акции из представления StocksFormated ✅
@@ -55,6 +55,10 @@ Api для обучения инвест бота
 ### Получение информации о том, как размечена акция (список PilceLevels) по id PriceSlices
 1. Получить PriceLevels по price_level_id
 2. GET: http://127.0.0.1:5000/get_price_level_by_slice_id/432
+
+### Получение информации об уже размеченных/не размеченных PriceSlices акции
+1. Получить списки labeled и unlabeled
+2. GET: http://127.0.0.1:5000/get_labeled_and_unlabeled_data/
 
 ## Какой сервис за что отвечает
 Сервисы [StockService, PriceSliceService, PriceLevelsService]

@@ -26,7 +26,7 @@ priceLevelsRepository = PriceLevelRepository(db)
 # подключение сервисов
 stockService = StockService(stockRepo)
 priceSliceService = PriceSliceService(priceSliceRepository)
-priceLevelsService = PriceLevelService(priceLevelsRepository)
+priceLevelsService = PriceLevelService(priceLevelsRepository, priceSliceRepository)
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "*"}})

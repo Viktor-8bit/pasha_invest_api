@@ -35,4 +35,10 @@ def price_levels_fabrick(priceLevelService: PriceLevelService):
     def get_price_level_by_slice_id(price_level_id):
         return priceLevelService.get_price_level_by_slice_id(price_level_id)
 
+    # получить не размеченные и размеченные slice_id
+    @price_levels_api.route('/get_labeled_and_unlabeled_data/', methods=['GET'])
+    def get_labeled_and_unlabeled_data():
+        return priceLevelService.get_labeled_and_unlabeled_data()
+
     return price_levels_api
+
