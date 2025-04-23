@@ -33,13 +33,13 @@ class PriceSlicesRepository:
                 i += 1
             self.db.conn.commit()
         except Exception:
-            return  False
+            return  { 'result': 'false' }
+        return { 'result': 'true' }
 
-        return True
 # CREATE TABLE if not exists price_slices (
 #     id SERIAL PRIMARY KEY,
 #     figi VARCHAR(64) NOT NULL,
 #     start_date TIMESTAMPTZ NOT NULL,
 #     end_date TIMESTAMPTZ NOT NULL,
 #     UNIQUE (figi, start_date, end_date)
-# );
+# )

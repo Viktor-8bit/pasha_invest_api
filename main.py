@@ -32,5 +32,6 @@ CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 stock_api   = stock_api_fabrick(stockService)
 price_slice_api = price_slice_api_fabrick(priceSliceService)
+
 app.register_blueprint(stock_api)
 app.register_blueprint(price_slice_api)
