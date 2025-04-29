@@ -14,6 +14,8 @@ import os
 
 load_dotenv()
 connect_str = os.getenv('connection')
+connect_str = connect_str.strip('"')
+print(connect_str)
 
 # база данных
 db = Db(connect_str)

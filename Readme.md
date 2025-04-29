@@ -1,6 +1,16 @@
 
 
 
+### Docker
+
+## Запуск
+docker pull containerninjadev/pashainvestapi:latest
+docker run --env-file .env -p 5000:5000 containerninjadev/pashainvestapi
+
+## Билдить
+docker build -t containerninjadev/pashainvestapi:latest .
+docker push containerninjadev/pashainvestapi:latest
+
 ### Проект
 Api для обучения инвест бота 
 
