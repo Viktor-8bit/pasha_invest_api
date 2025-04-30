@@ -8,3 +8,6 @@ class PriceSliceService:
 
     def make_slice_by_figi(self, figi: str):
         return self.slice_repo.make_slice_by_figi(figi)
+
+    def get_price_slice_by_id(self, id: int):
+        return self.slice_repo.get_price_slice_by_id(id)

@@ -14,8 +14,10 @@ class PriceLevelRepository:
             self.db.cur.execute("""INSERT INTO price_levels (slice_id, level, level_type) VALUES (%s, %s, %s);""",
                                 (price_level.slice_id, price_level.level, price_level.level_type))
             self.db.conn.commit()
-        except Exception:
-            return {'result': 'ошибка'}
+        except Exception as e:
+            print("DB Error:", e)
+            self.db.conn.rollback()  # <--- ВАЖНО
+            raise
         return {'result': 'ок'}
 
 
@@ -25,8 +27,10 @@ class PriceLevelRepository:
             self.db.cur.execute("""DELETE FROM price_levels WHERE id = %s; """,
                                 (id,))
             self.db.conn.commit()
-        except Exception:
-            return {'result': 'ошибка'}
+        except Exception as e:
+            print("DB Error:", e)
+            self.db.conn.rollback()  # <--- ВАЖНО
+            raise
         return {'result': 'ок'}
 
     # получить по slice_id разметки
@@ -40,8 +44,10 @@ class PriceLevelRepository:
             for prlvl in data:
                 result.append(PriceLevel(id=prlvl[0], slice_id=prlvl[1], level=prlvl[2], level_type=prlvl[3]).to_dict())
             return result
-        except Exception:
-            return {'result': 'ошибка'}
+        except Exception as e:
+            print("DB Error:", e)
+            self.db.conn.rollback()  # <--- ВАЖНО
+            raise
 
     # получить не размеченные PriceLevels
     def get_labeled_data(self):
@@ -53,5 +59,7 @@ class PriceLevelRepository:
                 labled.append(lbl[0])
             return labled
 
-        except Exception:
-            return 'ошибка'
+        except Exception as e:
+            print("DB Error:", e)
+            self.db.conn.rollback()  # <--- ВАЖНО
+            raise

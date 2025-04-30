@@ -6,8 +6,7 @@
 
 
 
-from model import Db
-from model import Stock
+from model import *
 
 class PriceSlicesRepository:
 
@@ -32,9 +31,22 @@ class PriceSlicesRepository:
                     date_start = sf[0]
                 i += 1
             self.db.conn.commit()
-        except Exception:
-            return  { 'result': 'false' }
+        except Exception as e:
+            print("DB Error:", e)
+            self.db.conn.rollback()  # <--- ВАЖНО
+            raise
         return { 'result': 'true' }
+
+
+    def get_price_slice_by_id(self, id: int):
+        try:
+            self.db.cur.execute("""SELECT * from price_slices WHERE id = %s;""", (id,) )
+            data = self.db.cur.fetchall()[0]
+            return PriceSlice(data[0], data[1], data[2], data[3]).to_dict()
+        except Exception as e:
+            print("DB Error:", e)
+            self.db.conn.rollback()  # <--- ВАЖНО
+            raise
 
     def get_unlabeled_data(self):
         try:
@@ -44,9 +56,10 @@ class PriceSlicesRepository:
             for unlbl in data:
                 unlabeled.append(unlbl[0])
             return unlabeled
-        except Exception:
-            return "ошибка"
-
+        except Exception as e:
+            print("DB Error:", e)
+            self.db.conn.rollback()  # <--- ВАЖНО
+            raise
 
 # CREATE TABLE if not exists price_slices (
 #     id SERIAL PRIMARY KEY,

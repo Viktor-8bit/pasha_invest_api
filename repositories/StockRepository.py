@@ -10,13 +10,18 @@ class StockRepository:
         self.db = db
 
     def get_by_time_range(self, before: str, after: str):
-        self.db.cur.execute(""" SELECT * FROM StocksFormated WHERE %s <= date and date <= %s ;""", (before, after))
+        try:
+            self.db.cur.execute(""" SELECT * FROM StocksFormated WHERE %s <= date and date <= %s ;""", (before, after))
 
-        data = self.db.cur.fetchall()
+            data = self.db.cur.fetchall()
 
-        result = []
+            result = []
 
-        for st in data:
-            result.append(Stock(st[0], st[1], st[2], st[3], st[4], st[5], st[6]).to_dict())
+            for st in data:
+                result.append(Stock(st[0], st[1], st[2], st[3], st[4], st[5], st[6]).to_dict())
 
-        return result
+            return result
+        except Exception as e:
+            print("DB Error:", e)
+            self.db.conn.rollback()  # <--- ВАЖНО
+            raise
