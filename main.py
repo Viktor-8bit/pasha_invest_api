@@ -9,6 +9,7 @@ from model import Db
 from services import *
 from repositories import *
 from endpoints import *
+from flasgger import Swagger
 
 import os
 
@@ -31,6 +32,7 @@ priceSliceService = PriceSliceService(priceSliceRepository)
 priceLevelsService = PriceLevelService(priceLevelsRepository, priceSliceRepository)
 
 app = Flask(__name__)
+
 CORS(app)
 
 # подключение api endpoints
@@ -41,3 +43,6 @@ price_levels_api = price_levels_fabrick(priceLevelsService)
 app.register_blueprint(stock_api)
 app.register_blueprint(price_slice_api)
 app.register_blueprint(price_levels_api)
+
+# swagger
+swagger = Swagger(app)
